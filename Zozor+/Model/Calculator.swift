@@ -10,9 +10,10 @@ import Foundation
 
 class Calculator {
     
+    // MARK : - Properties
+    
     var stringNumbers: [String] = [String()]
     var operators: [String] = ["+"]
-    var index = 0
     var previousResult = 0
     
     // MARK : - Methods
@@ -20,7 +21,6 @@ class Calculator {
     func clear() {
         stringNumbers = [String()]
         operators = ["+"]
-        index = 0
     }
     
     func calculateTotal() -> Int {

@@ -9,9 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+   
     // MARK: - Properties
+    
     var calculator = Calculator()
     
+    // Property used to check if an xpression is correct or not
     var isExpressionCorrect: Bool {
         if let stringNumber = calculator.stringNumbers.last {
             if stringNumber.isEmpty {
@@ -30,6 +33,7 @@ class ViewController: UIViewController {
         return true
     }
 
+    // Property used to validate or not the use of a new operator in the current expression
     var canAddOperator: Bool {
         if let stringNumber = calculator.stringNumbers.last {
             if stringNumber.isEmpty {
@@ -42,6 +46,7 @@ class ViewController: UIViewController {
         return true
     }
     
+    // Property used to check if the user is dividing or not by 0
     var cantDivideByZero: Bool {
         if let lastOperator = calculator.operators.last {
             if lastOperator == "/" {
@@ -54,8 +59,7 @@ class ViewController: UIViewController {
         return true
     }
 
-
-/////////////////////////////////////
+    
     // MARK: - Outlets
 
     @IBOutlet weak var textView: UITextView!

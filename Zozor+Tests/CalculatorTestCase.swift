@@ -39,7 +39,7 @@ class CalculatorTestCase: XCTestCase {
         XCTAssertTrue(calculator.stringNumbers == ["\(2)"])
     }
     
-    func testGivenOperatorArrayHasOnePlusAndStringNumbersHas2_WhenAddingMinus_ThenOperatorArrayHasMinusAndStringNumbersHasBlank() {
+    func testGivenOperatorArrayWithPlusAndNuberArrayWith2_WhenAddingMinus_ThenOperatorArrayHasMinusAndStringNumbersHasBlank() {
         calculator.addNewNumber(2)
         calculator.operators = ["+"]
         
